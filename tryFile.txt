@@ -1,4 +1,4 @@
-qwertqwerqwerqwer
+MickeyHuang233
 simple
 update to Github
 success for update Github
@@ -7,5 +7,7 @@ success for update Github
 ----------------------------------------------------
 	try modify history
 	conflict
+	good job!! finish conflict
 ----------------------------------------------------
-	finish conflict
+start try branch
+	hava a issue--issue number: 0001
