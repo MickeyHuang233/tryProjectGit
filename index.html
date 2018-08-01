@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Michongchong</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index_desktop.css">
+    <link rel="stylesheet" href="css/index_phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        @media screen and (max-width: 599px) {
+            .nav {
+                display: block;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="jquery/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        // 背景圖片更換
+        var bgPicRun = 4; //圖片總量
+        var bgPicMax = bgPicRun;
+        var bgPicRunNumber;
+        var timeDelay = 10000; //圖片變化間隔
+        var fadeSpeed = 400; //圖片變化速度
+
+        function bgPic() {
+            setTimeout("bgPic()", timeDelay);
+            bgPicRunNumber = '.wapper_bg_0' + bgPicRun;
+            //            alert(bgPicRun + "   " + bgPicMax + "   " + bgPicRunNumber);
+            if (bgPicRun < bgPicMax) {
+                $(bgPicRunNumber).fadeOut(fadeSpeed);
+                bgPicRun++;
+            } else if (bgPicRun == bgPicMax) {
+                for (var i = 1; i < bgPicMax; i++) {
+                    a = '.wapper_bg_0' + i;
+                    $(a).fadeIn(fadeSpeed);
+                };
+                bgPicRun = 1;
+            };
+        };
+
+        $('document').ready(function () {
+            //加載完淡入
+            $('.blackfadein').fadeOut(400);
+            bgPic();
+
+            // 菜單摸到位移,外加寬度判斷
+            $('.nav').hover(function () {
+                var containerWidth = $(window).width()
+                if (containerWidth < 600) {
+
+                } else {
+                    $('.nav').stop().animate({
+                        left: 0,
+                    }, 700);
+                    $('.move_screen').stop().animate({
+                        left: 150,
+                    }, 700);
+                };
+            }, function () {
+                var containerWidth = $(window).width()
+                if (containerWidth < 600) {
+
+                } else {
+                    $('.nav').stop().animate({
+                        left: -295,
+                    }, 700);
+                    $('.move_screen').stop().animate({
+                        left: 0,
+                    }, 700);
+                };
+            });
+            //            // 菜單摸到位移
+            //            $('.nav').hover(function () {
+            //                $('.nav').stop().animate({
+            //                    left: 0,
+            //                }, 700);
+            //                $('.move_screen').stop().animate({
+            //                    left: 150,
+            //                }, 700);
+            //            }, function () {
+            //                $('.nav').stop().animate({
+            //                    left: -295,
+            //                }, 700);
+            //                $('.move_screen').stop().animate({
+            //                    left: 0,
+            //                }, 700);
+            //            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wapper">
+        <div class="logo">
+            <div class="logo_icon"></div>
+            <div class="next_logo">MY WEBSITE & IMAGES</div>
+        </div>
+        <div class="blackfadein"></div>
+        <div class="move_screen wapper_bg_04"></div>
+        <div class="move_screen wapper_bg_03"></div>
+        <div class="move_screen wapper_bg_02"></div>
+        <div class="move_screen wapper_bg_01"></div>
+    </div>
+
+
+    <div class="nav">
+        <ul>
+            <li>
+                <div class="myname_wapper">
+                    <div class="myhead"></div>
+                    <a class="myname" href="index.html">Mickey</a>
+                </div>
+            </li>
+            <li class="menu">
+                <a href="gallery.html">
+                    <span class="fa fa-pencil fa-1x"></span> DESIGN
+                </a>
+            </li>
+            <li class="menu">
+                <a href="blog.html">
+                    <span class="fa fa-calendar fa-1x"></span> BLOG
+                </a>
+            </li>
+            <li class="menu">
+                <a href="note.html">
+                    <span class="fa fa-bookmark fa-1x"></span> NOTE
+                </a>
+            </li>
+            <li class="menu">
+                <a href="http://www.weibo.com/1540808830" target="_blank">
+                    <span class="fa fa-weibo fa-1x"></span> WEIBO
+                </a>
+            </li>
+        </ul>
+        <div class="bookme clearfix">
+            <a href="#"><span class="fa fa-share-alt fa-1x"></span></a>
+            <a href="#"><span class="fa fa-facebook-square fa-1x"></span></a>
+            <a href="#"><span class="fa fa-twitter fa-1x"></span></a>
+            <a href="#"><span class="fa fa-weibo fa-1x"></span></a>
+            <a href="mailto:a81080745@yahoo.com?subject=主旨內容&cc=1148177836@qq.com&bcc=a81080745@sina.com&body=姓名:  %0d%0d電話:  %0d%0d地址:  %0d"><span class="fa fa-envelope fa-1x"></span></a>
+        </div>
+    </div>
+</body>
+
+</html>
