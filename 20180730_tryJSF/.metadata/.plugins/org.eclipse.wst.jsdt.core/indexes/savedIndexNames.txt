@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\20180730_tryJSF\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
