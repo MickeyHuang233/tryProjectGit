@@ -18,4 +18,4 @@ try michongchong update
 hey
 ----------------------------------------------------
 2018/08/02
-	try SSH push
+	try SSH push--failure
