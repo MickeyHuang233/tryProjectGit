@@ -60,6 +60,17 @@
 				<f:selectItems value="#{student.hobbyOptions}" /> 
 			</h:selectManyCheckbox>
 			<br/>
+			What do you want to say?<br/>
+			<h:inputTextarea />
+			<br/>
+			try selectOneListbox:<br/>
+			<h:selectOneListbox>
+				<f:selectItem  itemValue="playBall" itemLabel="play ball"/>
+				<f:selectItem  itemValue="study" itemLabel="study"/>
+				<f:selectItem  itemValue="watchTV" itemLabel="watch TV"/>
+				<f:selectItem  itemValue="computer" itemLabel="computer"/>
+			</h:selectOneListbox>
+			<br/><br/>
 			<h:commandButton 
 				value="submit"  
 				action="myresponse" 
