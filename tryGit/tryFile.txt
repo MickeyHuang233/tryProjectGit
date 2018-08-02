@@ -1,21 +1,24 @@
-
 MickeyHuang233
 MickeyProjectMail233@gmail.com
-simple
-update to Github
-success for update Github
 ----------------------------------------------------
+2018/08/01
+----------------------------------------------------
+	simple
+	update to Github
+	success for update Github
 	this line is modify in Github website
-----------------------------------------------------
 	try modify history
 	conflict
 	good job!! finish conflict
-----------------------------------------------------
-start try branch
+	start try branch
 	hava a issue--issue number: 0001
-----------------------------------------------------
-try michongchong update
-hey
+	try michongchong update
+	hey
 ----------------------------------------------------
 2018/08/02
+----------------------------------------------------
 	try SSH push--failure
+	create new branch for gitNote and JSFNote
+	try website branch commit--success for local branch push
+	countinue to try Git branch
+	finish Github basic learning! Good Job!!
