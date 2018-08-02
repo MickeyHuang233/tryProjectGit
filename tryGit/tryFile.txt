@@ -19,3 +19,4 @@ hey
 ----------------------------------------------------
 2018/08/02
 	try SSH push--failure
+	create new branch for gitNote and JSFNote
