@@ -21,4 +21,5 @@ MickeyProjectMail233@gmail.com
 	create new branch for gitNote and JSFNote
 	try website branch commit--success for local branch push
 	countinue to try Git branch
-	finish Github basic learning! Good Job!!
+	finish Github basic learning! Good Job!!'
+	merged Git branch to master
