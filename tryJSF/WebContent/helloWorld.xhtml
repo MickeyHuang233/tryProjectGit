@@ -1,16 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
-<h:head>
-	<title>Hello World - Input From</title>
-</h:head>
-<h:body>
-	<h:form>
-		<h:inputText id="name" value="#{theUserName}"
-			a:placeholder="What's your name?" />
-		<h:commandButton value="submit" action="myresponse" />
-	</h:form>
+<html
+	lang = "en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h ="http://xmlns.jcp.org/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+	<h:head>
+		<title>Hello World - Input From</title>
+	</h:head>
+	<h:body>
+		<h:form>
+			First name:
+			<h:inputText 
+				id="firstName"  
+				value="#{student.firstName}"  
+				a:placeholder="What's your first name?" 
+			/>
+			<br/>
+			Last name:
+			<h:inputText 
+				id="lastName"
+				value="#{student.lastName}"
+				a:placeholder="What's your lest name?"
+			/>
+			<br/>
+			Country:
+			<h:selectOneMenu value="#{student.country}">
+				<!-- 
+				<f:selectItem itemValue="China" itemLabel="China-v" />
+				<f:selectItem itemValue="USA" itemLabel="United States" />
+				<f:selectItem itemValue="UK" itemLabel="United Kingdom" />
+				<f:selectItem itemValue="Brazil" itemLabel="Brazil" />
+				<f:selectItem itemValue="France" itemLabel="France" />
+				<f:selectItem itemValue="SoundHorizon" itemLabel="SoundHorizon" />
+			 	-->
+				<f:selectItems value="#{student.countryOptions}" />
+			</h:selectOneMenu>
+			<br/>
+			Programming Languages: 
+			<h:selectOneRadio value="#{student.favoriteLanguage}">
+				<!-- 
+				<f:selectItem itemValue="Java" itemLabel="Java" />
+				<f:selectItem itemValue="C#" itemLabel="C#" />
+				<f:selectItem itemValue="Ruby" itemLabel="Ruby" />
+				<f:selectItem itemValue="PHP" itemLabel="PHP" />
+				 -->
+				 <f:selectItems value="#{student.favoriteLanguageOptions}" />
+			</h:selectOneRadio>
+			<br/>
+			Hobby: 
+			<h:selectManyCheckbox value="#{student.hobby}">
+				<!-- 
+				<f:selectItem  itemValue="playBall" itemLabel="play ball"/>
+				<f:selectItem  itemValue="study" itemLabel="study"/>
+				<f:selectItem  itemValue="watchTV" itemLabel="watch TV"/>
+				<f:selectItem  itemValue="computer" itemLabel="computer"/>
+				-->
+				<f:selectItems value="#{student.hobbyOptions}" /> 
+			</h:selectManyCheckbox>
+			<br/>
+			<h:commandButton 
+				value="submit"  
+				action="myresponse" 
+			/>
 
-</h:body>
+		</h:form>
+		
+	</h:body>
 </html>
