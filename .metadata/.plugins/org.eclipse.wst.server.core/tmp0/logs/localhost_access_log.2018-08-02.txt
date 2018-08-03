@@ -1,5 +1,0 @@
-127.0.0.1 - - [02/Aug/2018:17:06:00 +0800] "GET / HTTP/1.1" 404 951
-0:0:0:0:0:0:0:1 - - [02/Aug/2018:17:06:02 +0800] "GET /tryJSF/faces/helloWorld.xhtml HTTP/1.1" 200 696
-0:0:0:0:0:0:0:1 - - [02/Aug/2018:17:06:34 +0800] "POST /tryJSF/faces/helloWorld.xhtml;jsessionid=E53C3819FA324ECB195258A2B50B82E4 HTTP/1.1" 200 212
-0:0:0:0:0:0:0:1 - - [02/Aug/2018:17:06:48 +0800] "GET /tryJSF/faces/helloWorld.xhtml HTTP/1.1" 200 653
-0:0:0:0:0:0:0:1 - - [02/Aug/2018:17:06:48 +0800] "GET /favicon.ico HTTP/1.1" 404 973
