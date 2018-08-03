@@ -7,6 +7,12 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 >
 	<h:head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<h:outputStylesheet name="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<h:outputScript name="bootstrap-3.3.7-dist/js/bootstrap.min.js"/>
+		
 		<title>Hello World - Input From</title>
 		<style>
 			*{
@@ -20,19 +26,21 @@
 	</h:head>
 	<h:body>
 		<h:form>
-			First name(必填):
-			<h:inputText 
-				id="firstName"  
-				value="#{student.firstName}"  
-				a:placeholder="What's your first name?"
-				required="true" 
-				requiredMessage="名字必須填寫的 啊"
-			/>
-			<h:messages 
-				for="firstName" 
-				styleClass="error"
-			/>
-			<br/>
+			<div>
+				First name(必填):
+				<h:inputText 
+					id="firstName"  
+					value="#{student.firstName}"  
+					a:placeholder="What's your first name?"
+					required="true" 
+					requiredMessage="名字必須填寫的 啊"
+				 	styleClass="form-control"
+				 />
+				<h:messages 
+					for="firstName" 
+					styleClass="error"
+				/>
+			</div>
 			Last name:
 			<h:inputText 
 				id="lastName"
@@ -44,9 +52,10 @@
 			<h:inputSecret 
 				id="password" 
 				lable="password"
-				requiredMessage="密碼數為0~10"
+				value="#{student.password}"
+				requiredMessage="密碼數為2~10"
 			>
-				<f:validateLongRange minimum="0" maximum="10" />
+				<f:validateLength minimum="2" maximum="10" />
 			</h:inputSecret>
 			<h:message for="password" styleClass="error" />
 			<br/>
@@ -105,7 +114,7 @@
 			<h:inputTextarea
 				id="somethingSay" 
 				lable="somethingSay"
-				value="#{userSomethingSay}"
+				value="#{student.somethingSay}"
 			>	
 			</h:inputTextarea>
 			<br/>

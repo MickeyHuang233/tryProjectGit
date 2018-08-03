@@ -10,12 +10,14 @@ import javax.faces.bean.ManagedBean;
 public class Student {
 	private String firstName;
 	private String lastName;
+	private String password;
 	private String country;
 	private String favoriteLanguage;
 	private String[] hobby;
 	List<String> countryOptions;
 	List<String> favoriteLanguageOptions;
 	List<String> hobbyOptions;
+	private String somethingSay;
 	
 	public Student() {
 		//countryﬂx??
@@ -79,6 +81,14 @@ public class Student {
 		this.lastName = lastName;
 	}
 	
+	public String getpassword() {
+		return password;
+	}
+
+	public void setpassword(String password) {
+		this.password = password;
+	}
+
 	public String getCountry() {
 		return country;
 	}
@@ -101,6 +111,14 @@ public class Student {
 
 	public void setHobby(String[] hobby) {
 		this.hobby = hobby;
+	}
+
+	public String getSomethingSay() {
+		return somethingSay;
+	}
+
+	public void setSomethingSay(String somethingSay) {
+		this.somethingSay = somethingSay;
 	}
 
 	

@@ -7,9 +7,23 @@
 >
 	<h:head>
 		<title>Hello World - Response</title>
+		<style>
+			*{
+				font-family: "微軟正黑體";
+			}
+			.wantToSay{
+				background-color: #555;
+				color: #fff;
+				width: 70%;
+				padding: 20px 0;
+			}
+		</style>
 	</h:head>
 	<h:body>
 		Hello, #{student.firstName} #{student.lastName}, and you come from #{student.country}.<br />
+		 
+		password: #{student.password}<br />
+		
 		Programming Languages: #{student.favoriteLanguage}<br />
 		
 		Hobby:
@@ -18,6 +32,11 @@
 				<li>#{tempHobby}</li>
 			</ui:repeat>
 		</ul>
-		 
+		
+		<br/>
+		What do you want to say?<br/>
+		<div class="wantToSay">
+			#{student.somethingSay}
+		</div>
 	</h:body>
 </html>
