@@ -8,14 +8,29 @@
 >
 	<h:head>
 		<title>Hello World - Input From</title>
+		<style>
+			*{
+				font-family:"微軟正黑體";
+			}
+			.error{
+				color: red;
+				font-size: 12px;
+			}
+		</style>
 	</h:head>
 	<h:body>
 		<h:form>
-			First name:
+			First name(必填):
 			<h:inputText 
 				id="firstName"  
 				value="#{student.firstName}"  
-				a:placeholder="What's your first name?" 
+				a:placeholder="What's your first name?"
+				required="true" 
+				requiredMessage="名字必須填寫的 啊"
+			/>
+			<h:messages 
+				for="firstName" 
+				styleClass="error"
 			/>
 			<br/>
 			Last name:
@@ -24,6 +39,16 @@
 				value="#{student.lastName}"
 				a:placeholder="What's your lest name?"
 			/>
+			<br/>
+			Password:
+			<h:inputSecret 
+				id="password" 
+				lable="password"
+				requiredMessage="密碼數為0~10"
+			>
+				<f:validateLongRange minimum="0" maximum="10" />
+			</h:inputSecret>
+			<h:message for="password" styleClass="error" />
 			<br/>
 			Country:
 			<h:selectOneMenu value="#{student.country}">
@@ -49,8 +74,23 @@
 				 <f:selectItems value="#{student.favoriteLanguageOptions}" />
 			</h:selectOneRadio>
 			<br/>
+			Age:
+			<h:inputText 
+				id="age"
+				label="Free Passes"
+			>
+				<f:validateLongRange minimum="0" maximum="100" />
+			</h:inputText>
+			<br/>
+			<h:message for="age" styleClass="error"/>
+			<br/>
 			Hobby: 
-			<h:selectManyCheckbox value="#{student.hobby}">
+			<h:selectManyCheckbox 
+				id="hobby" 
+				value="#{student.hobby}" 
+				required="true"
+				requiredMessage="必須要選一個喜好"
+			>
 				<!-- 
 				<f:selectItem  itemValue="playBall" itemLabel="play ball"/>
 				<f:selectItem  itemValue="study" itemLabel="study"/>
@@ -59,9 +99,15 @@
 				-->
 				<f:selectItems value="#{student.hobbyOptions}" /> 
 			</h:selectManyCheckbox>
+			<h:message for="hobby" styleClass="error" />
 			<br/>
 			What do you want to say?<br/>
-			<h:inputTextarea />
+			<h:inputTextarea
+				id="somethingSay" 
+				lable="somethingSay"
+				value="#{userSomethingSay}"
+			>	
+			</h:inputTextarea>
 			<br/>
 			try selectOneListbox:<br/>
 			<h:selectOneListbox>
