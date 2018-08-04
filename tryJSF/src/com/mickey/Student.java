@@ -4,7 +4,11 @@ package com.mickey;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
 
 @ManagedBean
 public class Student {
@@ -18,6 +22,7 @@ public class Student {
 	List<String> favoriteLanguageOptions;
 	List<String> hobbyOptions;
 	private String somethingSay;
+	private String courseCode;
 	
 	public Student() {
 		//countryßx??
@@ -120,7 +125,25 @@ public class Student {
 	public void setSomethingSay(String somethingSay) {
 		this.somethingSay = somethingSay;
 	}
-
 	
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
+
+	//¿ÍÑu»¯ß‰Ý‹
+	public void validateTheCourseCode(FacesContext context, UIComponent component, Object value) throws ValidatorException{
+		if(value ==null) {
+			return;
+		}
+		String data = value.toString();
+		if(!data.startsWith("LUV")) {
+			FacesMessage message = new FacesMessage("Course code must start with LUV");
+			throw new ValidatorException(message);
+		}
+	}
 	
 }

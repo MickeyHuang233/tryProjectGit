@@ -125,6 +125,15 @@
 				<f:selectItem  itemValue="watchTV" itemLabel="watch TV"/>
 				<f:selectItem  itemValue="computer" itemLabel="computer"/>
 			</h:selectOneListbox>
+			<br/>
+			Course Code: 
+			<h:inputText 
+				label="courseCode"
+				id="courseCode"
+				value="#{student.courseCode}"
+				validator="#{student.validateTheCourseCode}"
+			/>
+			<h:message for="courseCode" styleClass="error" />
 			<br/><br/>
 			<h:commandButton 
 				value="submit"  
