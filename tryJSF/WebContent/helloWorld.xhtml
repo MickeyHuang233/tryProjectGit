@@ -126,9 +126,17 @@
 				<f:selectItem  itemValue="computer" itemLabel="computer"/>
 			</h:selectOneListbox>
 			<br/><br/>
+			Select a color:
+			<h:selectOneMenu id="pageColor" value="#{student.color}">
+				<f:selectItem itemValue="none" itemLabel="none" />
+				<f:selectItem itemValue="blue" itemLabel="blue" />
+				<f:selectItem itemValue="pink" itemLabel="pink" />
+				<f:selectItem itemValue="yellow" itemLabel="yellow" />
+			</h:selectOneMenu>
+			<br/>
 			<h:commandButton 
 				value="submit"  
-				action="myresponse" 
+				action="#{student.toOtherPage()}" 
 			/>
 
 		</h:form>

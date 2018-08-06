@@ -11,6 +11,9 @@
 			*{
 				font-family: "微軟正黑體";
 			}
+			body{
+				background-color: #ff9999;
+			}
 			.wantToSay{
 				background-color: #555;
 				color: #fff;
@@ -38,9 +41,5 @@
 		<div class="wantToSay">
 			#{student.somethingSay}
 		</div>
-		<h:form>
-			Counter value: #{studentCounter.checkValue}
-			<h:commandButton value="plusOne" action="#{studentCounter.checkValuePlus()}" />
-		</h:form>
 	</h:body>
 </html>

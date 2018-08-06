@@ -18,6 +18,7 @@ public class Student {
 	List<String> favoriteLanguageOptions;
 	List<String> hobbyOptions;
 	private String somethingSay;
+	private String color;
 	
 	public Student() {
 		//countryﬂx??
@@ -120,7 +121,26 @@ public class Student {
 	public void setSomethingSay(String somethingSay) {
 		this.somethingSay = somethingSay;
 	}
-
 	
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+
+	public String toOtherPage() {
+		String pageColor = this.color;
+		if(pageColor.equals("yellow")) {
+			return "myresponse_yellow";
+		}else if(pageColor.equals("pink")) {
+			return "myresponse_pink";
+		}else if(pageColor.equals("blue")) {
+			return "myresponse_blue";
+		}else {
+			return "myresponse";
+		}
+	}
 	
 }
